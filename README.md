@@ -13,6 +13,8 @@ This repository provides a complete workflow for data cleaning, augmentation, mo
   * [Training](#training)
   * [Testing](#testing)
   * [Inference](#inference)
+  * [Output Examples](#output-examples)
+* [Assessment's Reports](#assessments-reports)
 
 ## Overview
 --------
@@ -93,6 +95,10 @@ python main.py --prepare --augment 2
 
 Train the T5 model:
 
+In order to customize the model's parameters, please adjsut the model_params.py file.
+For the moment the configuration is adjusted for an RTX3060 GPU.
+The model will be trained for 5 epochs.
+
 ```bash
 python main.py --train
 ```
@@ -132,3 +138,54 @@ python app.py --inference
 ```
 
 The aforementioned command generates normalized text output for built-in (given) examples.
+
+
+### Output Examples
+
+#### Inference examples:
+
+| RAW TEXT | PREDICTED NORMALIZED |
+|----------|----------------------|
+| Pixouu/Abdou Gambetta/Copyright Control | Pixouu/Abdou Gambetta |
+| Mike Hoyer/JERRY CHESNUT/SONY/ATV MUSIC PUBLISHING (UK) LIMITED | Correct and normalize: Mike Ho |
+
+
+#### Model Test/Evaluation Examples:
+
+#####  Evaluation Results Table
+
+| Metric                      | Score  |
+|-----------------------------|--------|
+| BLEU Score                 | 0.1658 |
+| Character-level Accuracy   | 0.4467 |
+| Word-level Accuracy        | 0.4431 |
+| Normalized Edit Distance   | 0.4197 |
+
+##### Example Predictions Table
+
+| Input | Predicted | Actual |
+|--------------------------------|----------------|----------------|
+| Paweł Jabłoński | Pawe Jaboski | Paweł Jabłoński |
+| Yuki Kishida/Kentaro Sonoda | *No Prediction* | Yuki Kishida/Kentaro Sonoda |
+| R.K.M./Nico Gomez/Universal Music publish GmbH/Universal Music Publishing N.V./Universal Music Publishing Gmbh | Nico Gomez | Nico Gomez |
+
+
+## Hardware Limitations
+
+The development setup consists of the following hardware specifications:
+
+- **Laptop** with **32GB RAM**
+- **Intel Core i7** Processor
+- **NVIDIA RTX 3060 (6GB VRAM)**
+
+Due to these hardware constraints, particularly the **limited GPU memory (6GB VRAM)**, challenges were faced in running large-scale deep learning models and high-resolution experiments efficiently.
+
+As a result, some model training and evaluations were conducted with optimizations for **lower VRAM consumption**, and certain large-scale experiments were not feasible within this setup.
+
+
+### Assessment's reports
+
+In order to learn more regarding the first and the second tasks, consider reading the following:
+
+- [Text Normalization Report](/docs/Text_Normalization_Report.pdf)
+- [Cover Song Identification Report](/docs/Song_Cover_Identification_Report.pdf)
