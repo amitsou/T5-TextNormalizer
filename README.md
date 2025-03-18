@@ -1,4 +1,4 @@
-# AI/ML Research Engineer Orfium Assessment: Task 1 - Text Normalization Project
+#Text Normalization Project
 
 A comprehensive implementation of text normalization combining the power of T5 models with rule-based preprocessing techniques.
 This repository provides a complete workflow for data cleaning, augmentation, model training, and inference.
