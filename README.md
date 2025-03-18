@@ -40,8 +40,8 @@ This project implements a text normalization pipeline featuring:
 ### Clone Repository
 
 ```bash
-git clone git@github.com:amitsou/Orfium.git
-cd Orfium
+git clone git@github.com:amitsou/T5-TextNormalizer.git
+cd T5-TextNormalizer
 ```
 
 ### Set Up Environment
