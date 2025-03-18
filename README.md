@@ -183,9 +183,6 @@ Due to these hardware constraints, particularly the **limited GPU memory (6GB VR
 As a result, some model training and evaluations were conducted with optimizations for **lower VRAM consumption**, and certain large-scale experiments were not feasible within this setup.
 
 
-### Assessment's reports
-
-In order to learn more regarding the first and the second tasks, consider reading the following:
+In order to learn more regarding the task, consider reading the following:
 
 - [Text Normalization Report](/docs/Text_Normalization_Report.pdf)
-- [Cover Song Identification Report](/docs/Song_Cover_Identification_Report.pdf)
